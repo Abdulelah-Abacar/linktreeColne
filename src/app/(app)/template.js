@@ -7,7 +7,7 @@ import mongoose from "mongoose";
 import { getServerSession } from "next-auth";
 import { Lato } from "next/font/google";
 import "../globals.css";
-import { headers } from "next/headers";
+// import { headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
@@ -22,7 +22,7 @@ export const metadata = {
 };
 
 export default async function AppTemplate({ children, ...rest }) {
-  const headersList = headers();
+  // const headersList = headers();
   const session = await getServerSession(authOptions);
   if (!session) {
     return redirect("/");
